@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.MainPage" BackgroundColor="Blue">
+
+    <Grid VerticalOptions="FillAndExpand" >
+
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal"  HorizontalOptions="Center" VerticalOptions="Start" Margin="20">
+            <Entry x:Name="search"  Placeholder="Enter city name" PlaceholderColor="DarkGreen"
+                  WidthRequest="200"
+                   BackgroundColor="White" HorizontalOptions="StartAndExpand" TextColor="Black"/>
+            <Button Text="Search" Clicked="Button_Clicked" />
+            
+
+            </StackLayout>
+        
+        
+    <StackLayout Orientation="Horizontal" Spacing="20" HorizontalOptions="Center" >
+            
+            <Label x:Name="place" Text="--------" FontSize="16" VerticalOptions="Center" TextColor="White"/>
+        </StackLayout>
+            
+            
+        <StackLayout Orientation="Vertical"  HorizontalOptions="Center" >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+<!--                <Image Source="weather.png" WidthRequest="50" HeightRequest="50" VerticalOptions="Center"/> -->
+                <Label x:Name="temp" Text="---" TextColor="White" FontSize="70" FontAttributes="Bold" VerticalOptions="Center"/>
+                <Label Text="°C" TextColor="White" FontSize="34" VerticalOptions="Center"/>
+            </StackLayout>
+             <Label x:Name="description" Text="---------------------" TextColor="White" FontSize="16" HorizontalOptions="Center"/>
+            
+            
+        </StackLayout>
+
+
+         
+            
+          
+
+
+
+        </StackLayout>
+      
+   <StackLayout Orientation="Vertical" Spacing="10" HorizontalOptions="Center"  VerticalOptions="End" Margin="0, 20, 0 ,66">
+                  <Frame Grid.Row="1" HasShadow="True" CornerRadius="10" Margin="20,-40,20,0" Padding="0"  HorizontalOptions="Center" HeightRequest="120" VerticalOptions="Center">
+                <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                        <Image Source="humidity.png" HeightRequest="25" HorizontalOptions="Center"/>
+                        <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                            <Label x:Name="humidity" Text="--" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label  Text="Humidity" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                        <Image Source="wind.png" HeightRequest="25" HorizontalOptions="Center"/>
+                        <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                            <Label x:Name="wind" Text="--" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label  Text="Wind" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                        <Image Source="sunrise.png" HeightRequest="25" HorizontalOptions="Center"/>
+                        <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                            <Label x:Name="sunrize" Text="--" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="sunrize" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                    <StackLayout Grid.Column="3" Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand">
+                        <Image Source="sunset.png" HeightRequest="25" HorizontalOptions="Center"/>
+                        <StackLayout Spacing="7" HorizontalOptions="CenterAndExpand">
+                            <Label x:Name="sunset" Text="--" TextColor="Black" FontSize="14" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="sunset" TextColor="#7D7D7D" FontSize="11" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Grid>
+            </Frame>
+
+                
+            </StackLayout>
+            
+         
+        
+      
+        
+       
+        
+     
+
+
+
+
+
+    </Grid>
+
+</ContentPage>
